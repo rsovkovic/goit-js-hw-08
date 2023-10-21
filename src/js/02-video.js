@@ -18,6 +18,8 @@ player.on(
 );
 const stopTime = localStorage.getItem('videoplayer-current-time');
 console.log(stopTime);
-player.setCurrentTime(stopTime).then(function (seconds) {
-  // seconds = the actual time that the player seeked to
-});
+if (stopTime !== null) {
+  player.setCurrentTime(stopTime).then(function (seconds) {
+    // seconds = the actual time that the player seeked to
+  });
+}
